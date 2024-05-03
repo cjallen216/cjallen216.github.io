@@ -140,6 +140,9 @@ a:hover {
 .position {
   text-transform: uppercase;
 }
+.years {
+  font-style: italic;
+}
 .position,
 .years {
   font-weight: 300;
@@ -148,36 +151,3 @@ a:hover {
 .company:nth-child(odd) {
   background-color: #d3d3d3;
 }
-
-/* TEST 1
-.name-style {
-  color: rgb(216, 216, 216);
-}
-
-.navbar {
-  background: #3d85c6;
-  margin: 0px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.navdiv {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo a {
-  font-size: 35px;
-  font-weight: 600;
-  color: white;
-}
-.nav-item {
-  list-style: none;
-  display: inline-block;
-}
-.nav-item a {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 25px;
-}
-END TEST 1 */
