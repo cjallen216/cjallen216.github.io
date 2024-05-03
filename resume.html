@@ -4,72 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>
-      <a href="/index.html">Home</a> | Resume |
-      <a
-        href="https://www.linkedin.com/in/christopherjallen216/"
-        target="_blank"
-        >LinkedIn</a
-      >
-    </p>
-    <h2>PROFESSIONAL EXPERIENCE</h2>
-    <ul>
-      <li>
-        <strong> Endeavor Business Media </strong>
-        <ul>
-          <li>Front End Web Developer | 06/2021 – Current</li>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="logo">
+          <a href="/">Chris<span class="name-style">topher J </span>Allen</a>
+        </div>
+        <ul class="links">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/resume.html">Resume</a></li>
+          <li class="nav-item">
+            <a
+              href="https://www.linkedin.com/in/christopherjallen216/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
         </ul>
-      </li>
-      <li>
-        <strong> Salem Media Group | Cleveland, OH </strong>
-        <ul>
-          <li>Digital Marketing Specialist / Webmaster | 12/2017 – 09/2020</li>
-        </ul>
-      </li>
-      <li>
-        <strong> Westlake Waves Swim Team | Westlake, OH </strong>
-        <ul>
-          <li>Assistant Swim Coach / Webmaster | 10/2011 – 03/2020</li>
-        </ul>
-      </li>
-      <li>
-        <strong> Schmidt Mortgage Company | Rocky River, OH </strong>
-        <ul>
-          <li>Digital Marketing Representative | 07/2017 – 09/2019</li>
-        </ul>
-      </li>
-      <li>
-        <strong> J.B. Stamping, Inc. | Cleveland, OH </strong>
-        <ul>
-          <li>Web Developer / IT / ERP Specialist | 06/2016 – 05/2017</li>
-        </ul>
-      </li>
-      <li>
-        <strong> CBS Radio | Cleveland, OH </strong>
-        <ul>
-          <li>Webmaster / Digital Content Lead | 02/2008 – 06/2016</li>
-          <li>Sales Assistant | 02/2006 – 02/2008</li>
-          <li>Promotional Event Team | 07/2003 – 02/2006</li>
-        </ul>
-      </li>
-    </ul>
-
-    <h2>EDUCATION</h2>
-    <ul>
-      <li><strong>Tech Elevator</strong></li>
-      <ul>
-        <li>Java Bootcamp | 2020 - 2021</li>
-      </ul>
-      <li><strong>Mount Union College</strong></li>
-      <ul>
-        <li>
-          Bachelor of Arts: Mass Media, Minor: Information Systems | 1999 - 2003
+        <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+      </div>
+      <div class="dropdown_menu">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/resume.html">Resume</a></li>
+        <li class="nav-item">
+          <a
+            href="https://www.linkedin.com/in/christopherjallen216/"
+            target="_blank"
+            >LinkedIn</a
+          >
         </li>
-      </ul>
-    </ul>
-    <p>v0.1</p>
+      </div>
+    </nav>
+    <div class="container">
+      <h2>PROFESSIONAL EXPERIENCE</h2>
+      <div class="company">
+        Endeavor Business Media
+        <div class="position">Front End Web Developer</div>
+        <div class="years">June 2021 - Current</div>
+      </div>
+      <div class="company">
+        Salem Media Group Cleveland
+        <div class="position">Digital Marketing Specialist / Webmaster</div>
+        <div class="years">Dec 2017 - Sept 2020</div>
+      </div>
+      <div class="company">
+        Westlake Waves Swim Team
+        <div class="position">Assistant Swim Coach / Webmaster</div>
+        <div class="years">Oct 2011 - Mar 2020</div>
+      </div>
+      <div class="company">
+        Schmidt Mortgage Company
+        <div class="position">Digital Marketing Representative</div>
+        <div class="years">July 2011 - Sept 2019</div>
+      </div>
+      <div class="company">
+        J.B. Stamping, Inc.
+        <div class="position">Web Developer / IT / ERP Specialist</div>
+        <div class="years">June 2016 - May 2017</div>
+      </div>
+      <div class="company">
+        CBS Radio Cleveland
+        <div class="position">Webmaster / Digital Content Lead</div>
+        <div class="years">Feb 2008 - June 2016</div>
+        <!-- </div> -->
+        <!-- <div class="company"> -->
+        <!-- CBS Radio Cleveland -->
+        <div class="position">Sales Assistant</div>
+        <div class="years">Feb 2006 - Feb 2008</div>
+        <!-- </div> -->
+        <!-- <div class="company"> -->
+        <!-- CBS Radio Cleveland -->
+        <div class="position">Promotional Event Team</div>
+        <div class="years">July 2003 - Feb 2006</div>
+      </div>
+
+      <h2>EDUCATION</h2>
+      <div class="company">
+        Tech Elevator
+        <div class="position">Java Bootcamp</div>
+        <div class="years">2020 - 2021</div>
+      </div>
+      <div class="company">
+        Mount Union College
+        <div class="position">
+          Bachelor of Arts: Mass Media, Minor: Information Systems
+        </div>
+        <div class="years">1999 - 2003</div>
+      </div>
+      <hr />
+      <p>v0.2</p>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
