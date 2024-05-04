@@ -8,13 +8,63 @@
   text-decoration: none;
 }
 
+html {
+  color-scheme: dark light;
+}
+
 body {
   min-height: 100vh;
 }
 
+.text-animate {
+  display: flex;
+  overflow: hidden;
+  width: 246px;
+  padding-bottom: 15px;
+}
+
+.text-animate .text {
+  position: relative;
+  color: #3d85c6;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.text-animate .text.first-text {
+  color: black;
+  margin-right: 0.5rem;
+}
+
+.text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-left: 2px solid #3d85c6;
+  animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 h2 {
-  margin-top: 30px;
+  margin-top: 20px;
   text-transform: uppercase;
+  color: #3d85c6;
+}
+
+h2:first-child {
+  margin-top: 0;
 }
 
 h3 {
@@ -128,26 +178,42 @@ a:hover {
   margin: 25px;
 }
 
-.company {
-  background-color: #f3f3f3;
+.resume-container {
+  margin: 25px;
   display: flex;
-  gap: 25px;
-  padding: 10px;
-  font-weight: bold;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.position {
-  text-transform: uppercase;
-}
-.years {
-  font-style: italic;
-}
-.position,
-.years {
-  font-weight: 300;
+  flex-direction: column;
 }
 
-.company:nth-child(odd) {
-  background-color: #d3d3d3;
+.skills-container {
+  border: 1px solid gray;
+  background-color: white;
+  padding: 15px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  filter: drop-shadow(5px 5px 4px #696969);
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.business {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.jobs-container {
+  padding: 10px;
+}
+
+.jobs-container:nth-child(even) {
+  background-color: #efefef;
+}
+
+.job {
+  margin-left: 15px;
 }
