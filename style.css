@@ -12,6 +12,24 @@ html {
   color-scheme: dark light;
 }
 
+@media (prefers-color-scheme: dark) {
+  .text.sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #121212 !important;
+  }
+  .skills-container {
+    background-color: #000 !important;
+  }
+  .jobs-container:nth-child(even) {
+    color: #000 !important;
+  }
+}
+
 body {
   min-height: 100vh;
 }
