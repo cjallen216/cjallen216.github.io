@@ -1,13 +1,3 @@
-const toggleBtn = document.querySelector(".toggle_btn");
-const toggleBtnIcon = document.querySelector(".toggle_btn i");
-const dropDownMenu = document.querySelector(".dropdown_menu");
-
-toggleBtn.onclick = function () {
-  dropDownMenu.classList.toggle("open");
-  const isOpen = dropDownMenu.classList.contains("open");
-  toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-};
-
 const text = document.querySelector(".sec-text");
 const textLoad = () => {
   setTimeout(() => {
@@ -23,3 +13,21 @@ const textLoad = () => {
 textLoad();
 
 setInterval(textLoad, 12000);
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const faq = button.nextElementSibling;
+    const icon = button.children[1];
+
+    faq.classList.toggle("show");
+    icon.classList.toggle("rotate");
+  });
+});
+
+let navigation = document.querySelector(".navigation");
+document.querySelector(".menu-toggle").onclick = function () {
+  this.classList.toggle("active");
+  navigation.classList.toggle("active");
+};

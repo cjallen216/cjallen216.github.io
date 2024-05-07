@@ -14,36 +14,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navdiv">
-        <div class="logo">
-          <a href="/">Chris<span class="name-style">topher J </span>Allen</a>
-        </div>
-        <ul class="links">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="/resume.html">Resume</a></li>
-          <li class="nav-item">
-            <a
-              href="https://www.linkedin.com/in/christopherjallen216/"
-              target="_blank"
-              >LinkedIn</a
-            >
-          </li>
-        </ul>
-        <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
-      </div>
-      <div class="dropdown_menu">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/resume.html">Resume</a></li>
-        <li class="nav-item">
+    <div class="navbar">
+      Chris<span class="name-style">topher J </span>Allen
+    </div>
+    <div class="navigation">
+      <div class="menu-toggle"></div>
+      <ul class="links">
+        <li>
+          <a href="/"
+            ><span class="link-icon"><i class="fa-solid fa-house"></i></span
+            ><span class="link-title">Home</span></a
+          >
+        </li>
+        <li>
+          <a href="/resume.html"
+            ><span class="link-icon"><i class="fa-solid fa-file"></i></span
+            ><span class="link-title">Resume</span></a
+          >
+        </li>
+        <li>
           <a
             href="https://www.linkedin.com/in/christopherjallen216/"
             target="_blank"
-            >LinkedIn</a
+            ><span class="link-icon"><i class="fa-brands fa-linkedin"></i></span
+            ><span class="link-title">LinkedIn</span></a
           >
         </li>
-      </div>
-    </nav>
+      </ul>
+    </div>
 
     <div class="container">
       <div class="text-animate">
@@ -61,7 +59,7 @@
       <p>&nbsp;</p>
       <p>Exciting things are coming… stay tuned!</p>
       <hr />
-      <p>v0.3</p>
+      <p style="text-align: right">v0.4</p>
     </div>
     <script src="app.js"></script>
   </body>
