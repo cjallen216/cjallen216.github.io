@@ -53,6 +53,16 @@ body {
   font-style: normal;
 }
 
+@media (max-width: 900px) {
+  .text-animate {
+    width: 246px;
+  }
+
+  .text-animate .text {
+    font-size: 30px;
+  }
+}
+
 .text.sec-text:before {
   content: "";
   position: absolute;
@@ -325,6 +335,7 @@ hr {
   display: block;
   line-height: 50px;
   white-space: nowrap;
+  color: #121212;
 }
 
 .navigation ul li:hover a .link-icon i,
