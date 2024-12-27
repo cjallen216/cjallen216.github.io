@@ -1,13 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap");
 
+:root {
+  --light-gray: #dadada;
+  --gray: gray;
+  --med-gray: #696969;
+  --background-gray: #414141;
+  --dark-gray: #121212;
+  --blue-ish: #3d85c6;
+  --lime-green: limegreen;
+  --white: #fff;
+  --cle-shout-out: rgb(216, 216, 216);
+}
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
-  color: #dadada;
+  color: var(--light-gray);
 }
 
 /* html {
@@ -34,7 +46,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #121212;
+  background-color: var(--dark-gray);
 }
 
 .text-animate {
@@ -46,8 +58,7 @@ body {
 
 .text-animate .text {
   position: relative;
-  color: #3d85c6;
-  color: limegreen;
+  color: var(--lime-green);
   font-size: 120px;
   font-family: "Jersey 25 Charted", sans-serif;
   font-weight: 400;
@@ -72,8 +83,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #121212;
-  /* border-left: 2px solid #3d85c6; */
-  border-left: 2px solid limegreen;
+  border-left: 2px solid var(--lime-green);
   animation: animate 4s steps(12) infinite;
 }
 
@@ -90,7 +100,7 @@ body {
 h2 {
   margin-top: 20px;
   text-transform: uppercase;
-  color: #3d85c6;
+  color: var(--blue-ish);
 }
 
 h2:first-child {
@@ -105,14 +115,14 @@ h3 {
 
 hr {
   margin: 20px 0;
-  border-top: 1px solid gray;
+  border-top: 1px solid var(--gray);
 }
 
 .navbar {
-  background: #3d85c6;
+  background: var(--blue-ish);
   position: relative;
   padding: 0 2rem;
-  color: #fff;
+  color: var(--white);
   font-size: 1.5rem;
   font-weight: 700;
   padding: 9px 30px;
@@ -120,11 +130,11 @@ hr {
 }
 
 .navbar a {
-  color: #fff;
+  color: var(--white);
 }
 
 .name-style {
-  color: rgb(216, 216, 216);
+  color: var(--cle-shout-out);
 }
 
 .navbar,
@@ -158,14 +168,18 @@ hr {
 }
 
 .skills-container {
-  border: 1px solid gray;
-  background-color: #121212;
+  border: 1px solid var(--gray);
+  background-color: var(--dark-gray);
   padding: 15px;
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  filter: drop-shadow(5px 5px 4px #696969);
+  filter: drop-shadow(5px 5px 4px var(--med-gray));
+}
+
+.skills-container p {
+  margin-bottom: 15px;
 }
 
 .company {
@@ -184,20 +198,20 @@ hr {
 }
 
 .jobs-container:nth-child(even) {
-  background-color: #414141;
+  background-color: var(--background-gray);
 }
 
 .job {
   margin-left: 15px;
 }
 
-.accordion-container {
+/* .accordion-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .accordion {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
 }
 
 .accordion button {
@@ -227,20 +241,20 @@ hr {
   overflow: hidden;
   transition: all 0.6s ease;
 }
-
-.plus-open {
+ */
+/* .plus-open {
   transition: transform 0.5s ease-in;
-}
+} */
 
-.accordion p.show {
-  max-height: 200px;
+/* .accordion p.show {
+  max-height: 1200px;
   opacity: 1;
   padding: 10px 15px 30px 15px;
 }
 
 .accordion button .plus-open.rotate {
   transform: rotate(45deg);
-}
+} */
 
 .navigation {
   position: absolute;
@@ -272,7 +286,7 @@ hr {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #3d85c6;
+  background-color: var(--blue-ish);
   transition: 0.5s;
   cursor: pointer;
   z-index: 1;
@@ -285,7 +299,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--white);
   width: 50px;
   height: 50px;
   font-weight: 400;
@@ -309,7 +323,7 @@ hr {
 }
 
 .navigation ul li:hover {
-  background-color: #3d85c6;
+  background-color: var(--blue-ish);
 }
 
 .navigation ul li a {
@@ -317,7 +331,7 @@ hr {
   display: flex;
   width: 100%;
   text-decoration: none;
-  color: #3d85c6;
+  color: var(--blue-ish);
 }
 
 .navigation ul li a .link-icon {
@@ -331,7 +345,7 @@ hr {
 
 .navigation ul li a .link-icon i {
   font-size: 1.15em;
-  color: #3d85c6;
+  color: var(--blue-ish);
 }
 
 .navigation ul li a .link-title {
@@ -344,7 +358,7 @@ hr {
 
 .navigation ul li:hover a .link-icon i,
 .navigation ul li:hover a .link-title {
-  color: #fff;
+  color: var(--white);
 }
 
 .navdiv {
@@ -358,17 +372,17 @@ hr {
 
 .full-navbar {
   display: block;
-  background: #3d85c6;
+  background: var(--blue-ish);
   position: relative;
   padding: 0 2rem;
-  color: #fff;
+  color: var(--white);
   font-size: 1.5rem;
   font-weight: 700;
   padding: 9px 30px;
 }
 
 .full-navbar a {
-  color: #fff;
+  color: var(--white);
 }
 
 .full-navbar .full-links {
@@ -395,53 +409,61 @@ hr {
   }
 }
 
-/* .navdiv a:hover {
-  text-decoration: underline;
-} */
-
-/* .cta-buttons {
+/* BEGIN TEST */
+details summary .icon svg {
+  height: 24px;
   display: flex;
-  gap: 2em;
-  margin-top: 10px;
-  align-items: center;
 }
 
-.btn-1 {
-  width: fit-content;
-  max-height: 60px;
-  padding: 8px 12px;
-  background-color: #3d85c6;
-  color: #fff;
-  border: 2px solid #3d85c6;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.3s ease;
+details .content img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+details .content {
+  padding: 16px;
+  line-height: 1.8;
+  margin-top: -10px;
+}
+
+details summary {
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background-color: var(--background-gray);
+  color: var(--white);
+  user-select: none;
+  transition: all 120ms ease;
 }
 
-.btn-1:hover {
-  background-color: #fff;
-  color: #3d85c6;
-  border: 2px solid #000;
+details summary:hover {
+  background-color: var(--blue-ish);
 }
 
-.btn-2 {
-  width: fit-content;
-  max-height: 60px;
-  padding: 8px 12px;
-  color: #3d85c6;
-  background-color: #fff;
-  border: 2px solid #3d85c6;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.3s ease;
-  cursor: pointer;
+details {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
 }
 
-.btn-2:hover {
-  color: #fff;
-  background-color: #3d85c6;
-  border: 2px solid #000;
-} */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  background: var(--blue-ish);
+  margin-bottom: 10px;
+}
+
+details summary .icon {
+  transition: all 120ms ease;
+}
+
+details[open] summary .icon {
+  rotate: 180deg;
+}
