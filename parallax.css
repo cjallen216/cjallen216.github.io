@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap");
+@import "https://unpkg.com/open-props/easings.min.css" layer(support.demo);
+
+:root {
+    --light-gray: #dadada;
+    --gray: gray;
+    --med-gray: #696969;
+    --background-gray: #414141;
+    --dark-gray: #121212;
+    --blue-ish: #3d85c6;
+    --blue-ish-hover: #3d85c695;
+    --lime-green: limegreen;
+    --white: #fff;
+    --cle-shout-out: rgb(216, 216, 216);
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+::-moz-selection {
+    color: #fff;
+}
+
+::selection {
+    color: #fff;
+}
+
+a {
+    color: var(--blue-ish);
+}
+
+a:hover {
+    color: var(--blue-ish-hover);
+}
+
+.hero {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: 0;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photo-cover {
+    background: #34495e url(/images/hero.jpeg) no-repeat center center/cover fixed;
+    height: 100%;
+    position: relative;
+}
+
+.background-primary {
+    background-color: var(--blue-ish);
+}
+
+.background-secondary {
+    background: rebeccapurple;
+    background: aqua;
+}
+
+.large {
+    font-size: 4em;
+}
+
+.medium {
+    font-size: 2em;
+}
+
+/* Header */
+.transparent {
+    background: transparent;
+}
+
+.navbar-inverse {
+    transition: all 0.2s ease-in;
+}
+
+.full-screen {
+    background: #eee;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow-y: scroll;
+}
+
+details summary .icon svg {
+    height: 24px;
+    display: flex;
+}
+
+details .content img {
+    width: 100%;
+    max-height: 200px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: 16px 0;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+details .content {
+    padding: 16px;
+    line-height: 1.8;
+    margin-top: -10px;
+}
+
+details summary {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    background-color: var(--med-gray);
+    color: var(--white);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 120ms ease;
+}
+
+details summary:hover {
+    background-color: var(--gray);
+}
+
+details {
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary {
+    background: var(--gray);
+    margin-bottom: 10px;
+}
+
+details summary .icon {
+    transition: all 120ms ease;
+}
+
+details[open] summary .icon {
+    rotate: 180deg;
+}
+
+.resume-container {
+    margin: 15px;
+}
+
+.skills-container {
+    padding: 15px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.skills-container p {
+    margin-bottom: 15px;
+}
+
+.company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.jobs-container {
+    padding: 10px;
+    background-color: var(--blue-ish);
+    border: 1px solid var(--cle-shout-out);
+}
+
+.jobs-container:nth-child(even) {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    border: 1px solid var(--cle-shout-out);
+}
+
+.job {
+    margin-left: 15px;
+}
+
+h1 span {
+    color: var(--cle-shout-out);
+    position: relative;
+    border: 1px solid transparent;
+}
+
+h1 span::before {
+    content: "";
+    height: 6rem;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: var(--cle-shout-out);
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+    animation: none;
+}
+
+@keyframes blink {
+    50% { opacity: 0 }
+}
+
+/* TEST */
+
+
+/* creates focus not by highlighting or promoting but by demoting what isn't being shown interest */
+.skills-container {
+    cursor: pointer;
+    ul {
+        @media (hover) and (prefers-reduced-motion: no-preference) {
+            & > li {
+                transform-origin: left center;
+                transition: transform 1s var(--ease-spring-3), opacity 0.3s var(--ease-3);
+            }
+            &:hover > li:not(:hover) {
+                opacity: 0.25;
+                transform: scale(0.8);
+            }
+        }
+    }
+    @layer support.demo {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html {
+            block-size: 100%;
+            color-scheme: dark light;
+        }
+        body {
+            min-block-size: 100%;
+            font-family: system-ui, sans-serif;
+            display: grid;
+            place-content: center;
+        }
+        ul {
+            font-size: 2rem;
+            font-weight: 200;
+        }
+    }
+} 
+
+
+/* END TEST */
