@@ -28,14 +28,6 @@ main {
     color: #fff;
 }
 
-a {
-    color: var(--blue-ish);
-}
-
-a:hover {
-    color: var(--blue-ish-hover);
-}
-
 .hero {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -56,12 +48,11 @@ a:hover {
 }
 
 .background-primary {
-    background-color: var(--blue-ish);
+    background-color: #2980b9;
 }
 
 .background-secondary {
-    background: rebeccapurple;
-    background: aqua;
+    background: #16a085;
 }
 
 .large {
@@ -72,90 +63,12 @@ a:hover {
     font-size: 2em;
 }
 
-/* Header */
 .transparent {
     background: transparent;
 }
 
 .navbar-inverse {
     transition: all 0.2s ease-in;
-}
-
-.full-screen {
-    background: #eee;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    overflow-y: scroll;
-}
-
-details summary .icon svg {
-    height: 24px;
-    display: flex;
-}
-
-details .content img {
-    width: 100%;
-    max-height: 200px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    margin: 16px 0;
-    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
-}
-
-details .content {
-    padding: 16px;
-    line-height: 1.8;
-    margin-top: -10px;
-}
-
-details summary {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 16px 24px;
-    background-color: var(--med-gray);
-    color: var(--white);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: all 120ms ease;
-}
-
-details summary:hover {
-    background-color: var(--gray);
-}
-
-details {
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
-
-details summary::-webkit-details-marker {
-    display: none;
-}
-
-details[open] summary {
-    background: var(--gray);
-    margin-bottom: 10px;
-}
-
-details summary .icon {
-    transition: all 120ms ease;
-}
-
-details[open] summary .icon {
-    rotate: 180deg;
-}
-
-.resume-container {
-    margin: 15px;
 }
 
 .skills-container {
@@ -170,32 +83,31 @@ details[open] summary .icon {
     margin-bottom: 15px;
 }
 
-.company {
+.skills-container li {
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.skills-container h4 {
+    border-bottom: 5px solid var(--cle-shout-out);
+    padding: 10px 0;
+}
+
+.skills-container h4:not(:nth-child(1)) {
+    padding-top: 3rem;
+}
+
+.experience-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--cle-shout-out);
 }
 
-.business {
-    font-size: 1.125rem;
-    font-weight: 600;
-}
-
-.jobs-container {
-    padding: 10px;
-    background-color: var(--blue-ish);
-    border: 1px solid var(--cle-shout-out);
-}
-
-.jobs-container:nth-child(even) {
-    background-color: var(--light-gray);
-    color: var(--dark-gray);
-    border: 1px solid var(--cle-shout-out);
-}
-
-.job {
-    margin-left: 15px;
-}
+/* TODO: Fix last child underline */
+/* .experience-container:nth-last-child(2) {
+    border-bottom: none;
+} */
 
 h1 span {
     color: var(--cle-shout-out);
@@ -223,13 +135,10 @@ h1 span.stop-blinking::before {
     50% { opacity: 0 }
 }
 
-/* TEST */
-
-
-/* creates focus not by highlighting or promoting but by demoting what isn't being shown interest */
 .skills-container {
-    cursor: pointer;
+    /* cursor: pointer; */
     ul {
+        list-style-type: none;
         @media (hover) and (prefers-reduced-motion: no-preference) {
             & > li {
                 transform-origin: left center;
@@ -262,6 +171,3 @@ h1 span.stop-blinking::before {
         }
     }
 } 
-
-
-/* END TEST */
