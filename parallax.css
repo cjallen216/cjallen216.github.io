@@ -173,13 +173,13 @@ h1 span.stop-blinking::before {
 } 
 
 .footer {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
     padding: 10px;
 }
 
 .footer a {
-    color: #fff;
+    color: #fff !important;
 }
 
 .footer a:hover {
