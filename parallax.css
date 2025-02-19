@@ -171,3 +171,17 @@ h1 span.stop-blinking::before {
         }
     }
 } 
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: #16a085;
+}
