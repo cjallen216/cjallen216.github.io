@@ -42,7 +42,7 @@ main {
 }
 
 .photo-cover {
-    background: #34495e url(/images/hero.jpeg) no-repeat center center/cover fixed;
+    background: url(/images/digital-hero.jpg);
     height: 100%;
     position: relative;
 }
@@ -183,5 +183,5 @@ h1 span.stop-blinking::before {
 }
 
 .footer a:hover {
-    color: #16a085;
+    color: #16a085 !important;
 }

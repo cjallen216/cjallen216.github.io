@@ -16,14 +16,16 @@
 * {
   box-sizing: border-box;
 }
-body {
-  /* background-color: var(--body-bg); */
-  background-color: #121212;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@media (min-width: 1100px) {
+  body {
+    /* background-color: var(--body-bg); */
+    background-color: #121212;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .book-nav {
   padding: 5px;
@@ -211,4 +213,76 @@ body {
 .book input[type="radio"]:checked + .book__page {
   transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
   transform: rotateY(-180deg);
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .mobile {
+    display: block;
+    height: 100%;
+    /* color: aliceblue; */
+    /* border: 10px solid aqua; */
+  }
+  .mobile-container {
+    padding: 0 10px;
+    margin: 0 25px;
+  }
+  .mobile img {
+    width: 100%;
+  }
+  .mobile h1, 
+  .author,
+  .mobile-nav {
+    text-align: center;
+  }
+  .desktop {
+    display: none;
+  }
+  .scroll-container {
+    overflow: hidden;
+  }
+  
+  .scroll-text {
+    height: 100%;
+    text-align: center;
+    
+    /* animation properties */
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    
+    -moz-animation: my-animation 50s linear infinite;
+    -webkit-animation: my-animation 50s linear infinite;
+    animation: my-animation 50s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateY(0%); }
+    to { -moz-transform: translateY(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateY(0%); }
+    to { -webkit-transform: translateY(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateY(0%);
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    to {
+      -moz-transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+
+
 }

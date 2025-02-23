@@ -5,110 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Seahorse</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="book.css" />
   </head>
   <body>
-    <div class="book-nav">
-      <a href="/">Home</a> |
-      <a href="/the-gift.html">The Gift</a>
+    <div class="mobile">
+      <h1>The Seahorse</h1>
+      <p class="author">by Anne Wagner</p>
+      <div class="scroll-container">
+        <div class="scroll-text"> 
+          <img src="/images/seahorse.jpg" alt="seahorse" />
+          <p>
+            Have You Ever Seen A Seahorse, Swimming In The Sea?
+            The One I Saw Was Tiny, As Small As He Could Be.
+          </p>
+          <p>
+            His Bones Were On The Outside And His Tail Was Curling In.
+            He Could Hook It O'er A Seaweed Blade And Stand There On A Whim.
+          </p>
+          <p>
+            I Saw This Tiny Seahorse,  But He Wasn't In The Water!
+            I Saw Him In A Seagull's Beak, Just Where He Shouldn't Ought'er!
+          </p>
+          <p>
+            I Shied A Seashell At The Gull Which Made Him Drop His Prey.
+            And Then I Ran To Get It,  Yelling, “Gull! You Keep Away!”
+          </p>
+          <p>
+            I Held It Oh, So Gently, And I Saw Its  Soft Round Tummy.
+            Its Heart Was Beating Crazily; I Didn't Think It Funny.
+          </p>
+          <p>
+            The Seagull Did; He Laughed Out Loud! I Wondered What To Do.
+            I Placed The Horse Down In The Surf, At Which The Seagull Flew.
+          </p>
+          <p>
+            But Where'd He Go, The Seagull? Right To That Sliding Wave
+            To Pick That Seahorse Up Again, And Mock My Efforts Brave!
+          </p>
+          <p>
+            “Oh, No You Don't!” I Shouted As I Threw Another Shell,
+            And When It Landed Mr. Gull Let Out A Mighty Yell.
+          </p>
+          <p>
+            Again He Dropped The Tiny Horse And Slowly Backed Away.
+            He Knew That I Meant Business, That I Wasn't There To Play.
+          </p>
+          <p>
+            This Time When I Took Little Horse I Walked Into The Waves.
+            I Walked Out, Far As I Could Go, To Make Sure He Was Saved.
+          </p>
+          <p>
+            Lowered Gently 'neath The Surf, I Watched Him Swim Away....
+            I Miss Him Still, That Precious Horse.  He'd Surely Made My Day.
+          </p>
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <a href="/">Home</a> |
+        <a href="/the-gift.html">The Gift</a>
+      </div>
     </div>
-    <div class="cover">
-      <div class="book">
-        <!-- PAGE 1 - COVER ART -->
-        <label for="page-1" class="book__page book__page--1">
-          <img src="/images/seahorse.jpg" alt="" />
-        </label>
-        <!-- PAGE 3 - Main Content -->
-        <label for="page-2" class="book__page book__page--4">
-          <div class="page__content">
-            <h1 class="page__content-title" style="color: transparent;">II</h1>
-            <div class="page__content-text">
-              <p>
-                But where'd he go, the seagull? Right to that sliding wave to
-                pick that seahorse up again, and mock my efforts brave!
-              </p>
-              <p>
-                “Oh, no you don't!” I shouted as I threw another shell, and when
-                it landed Mr. Gull let out a mighty yell.
-              </p>
-              <p>
-                Again he dropped the tiny horse and slowly backed away. He knew
-                that I meant business, that I wasn't there to play.
-              </p>
-              <p>
-                This time when I took little horse I walked into the waves. I
-                walked out, far as I could go, to make sure he was saved.
-              </p>
-              <p>
-                Lowered gently 'neath the surf, I watched him swim away... I
-                miss him still, that precious horse. he'd surely made my day.
-              </p>
-            </div>
-            <div class="page__number">3</div>
-          </div>
-        </label>
-
-        <!-- Resets the page -->
-        <input type="radio" name="page" id="page-1" />
-
-        <!-- Goes to the second page -->
-        <input type="radio" name="page" id="page-2" />
-        <label class="book__page book__page--2">
-          <div class="book__page-front">
+    <div class="desktop">
+      <div class="book-nav">
+        <a href="/">Home</a> |
+        <a href="/the-gift.html">The Gift</a>
+      </div>
+      <div class="cover">
+        <div class="book">
+          <!-- PAGE 1 - COVER ART -->
+          <label for="page-1" class="book__page book__page--1">
+            <img src="/images/seahorse.jpg" alt="" />
+          </label>
+          <!-- PAGE 3 - Main Content -->
+          <label for="page-2" class="book__page book__page--4">
             <div class="page__content">
-              <h1 class="page__content-book-title">The Seahorse</h1>
-              <h2 class="page__content-author">Anne Wagner</h2>
-
-              <p class="page__content-credits">
-                Written by my grandmother for my daughter just before she passed away.
-              </p>
-              <p class="page__content-credits">
-                <span><i class="fa-solid fa-arrow-right"></i></span>
-              </p>
-            </div>
-          </div>
-          <div class="book__page-back">
-            <div class="page__content">
-              <h1 class="page__content-title" style="color: transparent;">I</h1>
+              <h1 class="page__content-title" style="color: transparent;">II</h1>
               <div class="page__content-text">
                 <p>
-                  Have you ever seen a seahorse, swimming in the sea? The one I
-                  saw was tiny, as small as he could be.
+                  But where'd he go, the seagull? Right to that sliding wave to
+                  pick that seahorse up again, and mock my efforts brave!
                 </p>
                 <p>
-                  His bones were on the outside and his tail was curling in. He
-                  could hook it o'er a seaweed blade and stand there on a whim.
+                  “Oh, no you don't!” I shouted as I threw another shell, and when
+                  it landed Mr. Gull let out a mighty yell.
                 </p>
                 <p>
-                  I saw this tiny seahorse, but he wasn't in the water! I saw
-                  him in a seagull's beak, just where he shouldn't ought'er!
+                  Again he dropped the tiny horse and slowly backed away. He knew
+                  that I meant business, that I wasn't there to play.
                 </p>
                 <p>
-                  I shied a seashell at the gull which made him drop his prey.
-                  and then I ran to get it, yelling, “Gull! you keep away!”
+                  This time when I took little horse I walked into the waves. I
+                  walked out, far as I could go, to make sure he was saved.
                 </p>
                 <p>
-                  I held it oh, so gently, and I saw its soft round tummy. Its
-                  heart was beating crazily; I didn't think it funny.
-                </p>
-                <p>
-                  The seagull did; he laughed out loud! I wondered what to do. I
-                  placed the horse down in the surf, at which the seagull flew.
+                  Lowered gently 'neath the surf, I watched him swim away... I
+                  miss him still, that precious horse. he'd surely made my day.
                 </p>
               </div>
-              <div class="page__number">2</div>
+              <div class="page__number">3</div>
             </div>
-          </div>
-        </label>
+          </label>
+          
+          <!-- Resets the page -->
+          <input type="radio" name="page" id="page-1" />
+          
+          <!-- Goes to the second page -->
+          <input type="radio" name="page" id="page-2" />
+          <label class="book__page book__page--2">
+            <div class="book__page-front">
+              <div class="page__content">
+                <h1 class="page__content-book-title">The Seahorse</h1>
+                <h2 class="page__content-author">Anne Wagner</h2>
+                
+                <p class="page__content-credits">
+                  Written by my grandmother for my daughter just before she passed away.
+                </p>
+                <p class="page__content-credits">
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                </p>
+              </div>
+            </div>
+            <div class="book__page-back">
+              <div class="page__content">
+                <h1 class="page__content-title" style="color: transparent;">I</h1>
+                <div class="page__content-text">
+                  <p>
+                    Have you ever seen a seahorse, swimming in the sea? The one I
+                    saw was tiny, as small as he could be.
+                  </p>
+                  <p>
+                    His bones were on the outside and his tail was curling in. He
+                    could hook it o'er a seaweed blade and stand there on a whim.
+                  </p>
+                  <p>
+                    I saw this tiny seahorse, but he wasn't in the water! I saw
+                    him in a seagull's beak, just where he shouldn't ought'er!
+                  </p>
+                  <p>
+                    I shied a seashell at the gull which made him drop his prey.
+                    and then I ran to get it, yelling, “Gull! you keep away!”
+                  </p>
+                  <p>
+                    I held it oh, so gently, and I saw its soft round tummy. Its
+                    heart was beating crazily; I didn't think it funny.
+                  </p>
+                  <p>
+                    The seagull did; he laughed out loud! I wondered what to do. I
+                    placed the horse down in the surf, at which the seagull flew.
+                  </p>
+                </div>
+                <div class="page__number">2</div>
+              </div>
+            </div>
+          </label>
+        </div>
       </div>
     </div>
   </body>
   </html>
   
-  <!--  -->
