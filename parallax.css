@@ -34,6 +34,10 @@ main {
     margin-bottom: 0;
 }
 
+.down-arrow {
+    color: var(--white);
+}
+
 .center {
     position: absolute;
     top: 50%;
@@ -145,7 +149,7 @@ h1 span.stop-blinking::before {
                 transition: transform 1s var(--ease-spring-3), opacity 0.3s var(--ease-3);
             }
             &:hover > li:not(:hover) {
-                opacity: 0.25;
+                opacity: 0.6;
                 transform: scale(0.8);
             }
         }
@@ -171,6 +175,52 @@ h1 span.stop-blinking::before {
         }
     }
 } 
+
+/* START TEST using divs and spans */
+
+.skills-container {
+    /* cursor: pointer; */
+    .skills {
+        display: flex;
+        gap: 15px;
+        margin-left: 5rem;
+        a {
+            color: white;
+        }
+        @media (hover) and (prefers-reduced-motion: no-preference) {
+            & > .skill {
+                transform-origin: left center;
+                transition: transform 1s var(--ease-spring-3), opacity 0.3s var(--ease-3);
+            }
+            &:hover > .skill:not(:hover) {
+                opacity: 0.6;
+                transform: scale(0.8);
+            }
+        }
+    }
+    @layer support.demo {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html {
+            block-size: 100%;
+            color-scheme: dark light;
+        }
+        body {
+            min-block-size: 100%;
+            font-family: system-ui, sans-serif;
+            display: grid;
+            place-content: center;
+        }
+        .skill {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+} 
+
+/* END TEST */
 
 .footer {
     display: flex !important;
